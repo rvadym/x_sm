@@ -22,14 +22,14 @@ class Controller_ServMessages extends \Controller {
 
         $this->api->x_sm = $this;
 
-        $this->showMwssages();
+        $this->showMessages();
     }
     function addMessage($key, $type, $value) {
         $messages_arr = $this->recallMessages();
         $messages_arr[$key] = array('type'=>$type,'text'=>$value);
         $this->memorizeMessages($messages_arr);
     }
-    function showMwssages() {
+    function showMessages() {
         $messages_arr = $this->recallMessages();
         if (!is_array($messages_arr)) return false;
         foreach ($messages_arr as $message) {
