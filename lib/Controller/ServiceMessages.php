@@ -35,13 +35,13 @@ class Controller_ServiceMessages extends \Controller {
         foreach ($messages_arr as $message) {
             switch ($message['type']) {
                 case 'success':
-                    $this->api->js(true)->univ()->successMessage($message['text']);
+                    $this->api->js(true)->univ()->successMessage($this->api->_($message['text']));
                     break;
                 case 'error':
-                    $this->api->js(true)->univ()->errorMessage($message['text']);
+                    $this->api->js(true)->univ()->errorMessage($this->api->_($message['text']));
                     break;
                 default:
-                    throw $this->exception('There is no such a system message type!');
+                    throw $this->exception($this->api->_('There is no such a system message type!'));
             }
         }
         $this->forgetMessages();
