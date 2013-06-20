@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 namespace x_sm;
-class Controller_ServMessages extends \Controller {
+class Controller_ServiceMessages extends \Controller {
     public $session_var_name = 'user_panel_lang';
     function init() {
         parent::init();

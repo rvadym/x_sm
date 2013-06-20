@@ -3,7 +3,7 @@ Plugin for atk4 which can help to show service messages after page reload
 
 In api (Frontend.php)
     
-    $this->add('x_sm\Controller_ServMessages'); 
+    $this->add('x_sm\Controller_ServiceMessages');
     
     
 Shema:
