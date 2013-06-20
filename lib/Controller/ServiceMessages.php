@@ -8,7 +8,7 @@
  */
 namespace x_sm;
 class Controller_ServiceMessages extends \Controller {
-    public $session_var_name = 'user_panel_lang';
+    public $session_var_name = 'atk4_service_messages';
     function init() {
         parent::init();
 		// add add-on locations to pathfinder
